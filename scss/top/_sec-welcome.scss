@@ -1,0 +1,10 @@
+.sec-welcome {
+  height: 100vh;
+  background-color: #111111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .logo {
+    width: vw_pc(280);
+  }
+}

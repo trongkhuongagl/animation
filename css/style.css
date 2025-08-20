@@ -1,0 +1,227 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.8333333333vw;
+  font-weight: 400;
+  color: #666666;
+  line-height: 1.5;
+  letter-spacing: 0.1em;
+  overflow-x: hidden;
+}
+@media screen and (max-width: 767px) {
+  body {
+    font-size: 3.4666666667vw;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+.c-cover {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* Section sticky */
+.sticky-wrapper {
+  position: relative;
+}
+
+.sticky-section {
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-size: cover;
+  background-position: center;
+}
+.sticky-section .title {
+  font-size: 4.6875vw;
+  font-weight: 600;
+  color: #fff;
+  margin-left: 3.125vw;
+}
+
+.sec-creative-design {
+  background-image: url("../images/img_01.jpg");
+}
+
+.sec-brand-identity {
+  background-image: url("../images/img_02.jpg");
+}
+
+.sec-well-management {
+  background-image: url("../images/img_03.jpg");
+}
+
+.loader-wrapper {
+  position: fixed;
+  inset: 0;
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 9999;
+}
+
+.loader {
+  width: 40px;
+  height: 26px;
+  --c: no-repeat linear-gradient(#000 0 0);
+  background: var(--c) 0 100%, var(--c) 50% 100%, var(--c) 100% 100%;
+  background-size: 8px calc(100% - 4px);
+  position: relative;
+}
+
+.loader:before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #000;
+  left: 0;
+  top: 0;
+  -webkit-animation: l3-1 1.5s linear infinite alternate, l3-2 0.75s cubic-bezier(0, 200, 0.8, 200) infinite;
+          animation: l3-1 1.5s linear infinite alternate, l3-2 0.75s cubic-bezier(0, 200, 0.8, 200) infinite;
+}
+
+@-webkit-keyframes l3-1 {
+  100% {
+    left: calc(100% - 8px);
+  }
+}
+
+@keyframes l3-1 {
+  100% {
+    left: calc(100% - 8px);
+  }
+}
+@-webkit-keyframes l3-2 {
+  100% {
+    top: -0.1px;
+  }
+}
+@keyframes l3-2 {
+  100% {
+    top: -0.1px;
+  }
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 4.8958333333vw;
+  padding: 0 2.0833333333vw;
+  background: transparent;
+  z-index: 1000;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+header.show {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+header .logo {
+  width: 5.3125vw;
+}
+header .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 3.2291666667vw;
+}
+header .menu a {
+  font-size: 1.0416666667vw;
+  font-weight: 500;
+  color: #fff;
+  line-height: 1;
+  text-decoration: none;
+  position: relative;
+}
+header .menu a::after {
+  content: "";
+  width: 0;
+  height: 0.2083333333vw;
+  background-color: #fff;
+  position: absolute;
+  bottom: -0.8854166667vw;
+  left: 0;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+header .menu a:hover::after, header .menu a.active::after {
+  width: 100%;
+}
+
+.sec-welcome {
+  height: 100vh;
+  background-color: #111111;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.sec-welcome .logo {
+  width: 14.5833333333vw;
+}
+
+footer {
+  background: #111;
+  padding: 50px;
+  text-align: center;
+  color: #aaa;
+}
+/*# sourceMappingURL=style.css.map */

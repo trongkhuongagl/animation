@@ -1,0 +1,13 @@
+// Mixin: flex center
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// Media SP
+@mixin sp {
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+}

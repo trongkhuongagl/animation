@@ -1,0 +1,49 @@
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: vw_pc(94);
+  padding: 0 vw_pc(40);
+  background: transparent;
+  z-index: 1000;
+  transform: translateY(-100%);
+  transition: all 0.3s;
+  &.show {
+    transform: translateY(0);
+  }
+  .logo {
+    width: vw_pc(102);
+  }
+  .menu {
+    display: flex;
+    gap: vw_pc(62);
+    a {
+      font-size: vw_pc(20);
+      font-weight: 500;
+      color:#fff;
+      line-height: 1;
+      text-decoration: none;
+      position: relative;
+      &::after {
+        content: '';
+        width: 0;
+        height: vw_pc(4);
+        background-color: #fff;
+        position: absolute;
+        bottom: vw_pc(-17);
+        left: 0;
+        transition: all .3s;
+      }
+      &:hover,
+      &.active {
+        &::after {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
