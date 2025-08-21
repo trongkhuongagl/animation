@@ -32,6 +32,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Works
 document.addEventListener("DOMContentLoaded", () => {
+  let item_01 = ".js-sec-works-list .item-01";
+  let item_03 = ".js-sec-works-list .item-03";
   let tl = gsap.timeline({
     scrollTrigger: {
       trigger: ".js-sec-works-list",
@@ -42,11 +44,37 @@ document.addEventListener("DOMContentLoaded", () => {
       invalidateOnRefresh: true,
     }
   });
-  tl.to(".item-01", { xPercent: -100, ease: "none" }, 0);
-  tl.to(".item-03", { xPercent: 100, ease: "none" }, 0);
+  tl.to(item_01, { xPercent: -100, ease: "none" }, 0);
+  tl.to(item_03, { xPercent: 100, ease: "none" }, 0);
 
   // Re-measure the entire height and calculate the correct sticky position.
   window.addEventListener("load", () => {
     ScrollTrigger.refresh();
+  });
+});
+
+// Design
+document.addEventListener("DOMContentLoaded", () => {
+  const horizontalSection = document.querySelector(".js-sec-design");
+  const horizontalList = document.querySelector(".js-sec-design-list");
+
+  // Tính chiều rộng phần content ngang
+  const totalScrollWidth = horizontalList.scrollWidth;
+  const viewportWidth = window.innerWidth;
+  const scrollDistance = totalScrollWidth - viewportWidth;
+
+  gsap.to(horizontalList, {
+    x: () => -scrollDistance, // horizontal translation along the roll direction
+    ease: "none",
+    scrollTrigger: {
+      trigger: horizontalSection,
+      pin: true, // keep section fixed
+      scrub: 1, // Smooth sync with scroll
+      start: "top top", // start when top viewport is touched
+      end: () => "+=" + scrollDistance, // scroll length = horizontal content length
+      anticipatePin: 1, // Helps animation smoother at the start of the battery, avoiding frame stuttering
+      invalidateOnRefresh: true, // Tell ScrollTrigger to refresh dynamic values ​​when called
+      markers: true,
+    }
   });
 });
