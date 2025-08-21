@@ -126,9 +126,12 @@ header {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
-header.show {
+header.is-show {
   -webkit-transform: translateY(0);
           transform: translateY(0);
+}
+header.is-change-color .menu a {
+  color: #222222;
 }
 header .logo {
   width: 5.3125vw;
@@ -151,7 +154,7 @@ header .menu a::after {
   content: "";
   width: 0;
   height: 0.2083333333vw;
-  background-color: #fff;
+  background-color: currentColor;
   position: absolute;
   bottom: -0.8854166667vw;
   left: 0;

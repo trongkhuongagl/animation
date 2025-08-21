@@ -12,8 +12,13 @@ header {
   z-index: 1000;
   transform: translateY(-100%);
   transition: all 0.3s;
-  &.show {
+  &.is-show {
     transform: translateY(0);
+  }
+  &.is-change-color {
+    .menu a {
+      color: #222222;
+    }
   }
   .logo {
     width: vw_pc(102);
@@ -32,7 +37,7 @@ header {
         content: '';
         width: 0;
         height: vw_pc(4);
-        background-color: #fff;
+        background-color: currentColor;
         position: absolute;
         bottom: vw_pc(-17);
         left: 0;
