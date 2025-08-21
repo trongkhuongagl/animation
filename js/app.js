@@ -1,4 +1,4 @@
-// Loader ẩn sau khi page load
+// Loader
 window.addEventListener("DOMContentLoaded", (event) => {
   const loader = document.querySelector(".loader-wrapper");
   setTimeout(() =>  {
@@ -28,4 +28,25 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   observer.observe(creative_design);
+});
+
+// Works
+document.addEventListener("DOMContentLoaded", () => {
+  let tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".js-sec-works-list",
+      start: "top bottom",
+      end: "bottom bottom",
+      scrub: 1,
+      // markers: true,
+      invalidateOnRefresh: true,
+    }
+  });
+  tl.to(".item-01", { xPercent: -100, ease: "none" }, 0);
+  tl.to(".item-03", { xPercent: 100, ease: "none" }, 0);
+
+  // Re-measure the entire height and calculate the correct sticky position.
+  window.addEventListener("load", () => {
+    ScrollTrigger.refresh();
+  });
 });

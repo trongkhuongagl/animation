@@ -39,6 +39,24 @@ img {
   vertical-align: middle;
 }
 
+.pc {
+  display: block;
+}
+@media screen and (max-width: 767px) {
+  .pc {
+    display: none;
+  }
+}
+
+.sp {
+  display: none;
+}
+@media screen and (max-width: 767px) {
+  .sp {
+    display: block;
+  }
+}
+
 .c-cover {
   width: 100%;
   height: 100%;
@@ -46,11 +64,13 @@ img {
      object-fit: cover;
 }
 
-/* Section sticky */
-.sticky-wrapper {
-  position: relative;
+.l-container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
 }
 
+/* Section sticky */
 .sticky-section {
   height: 100vh;
   position: sticky;
@@ -72,15 +92,15 @@ img {
 }
 
 .sec-creative-design {
-  background-image: url("../images/img_01.jpg");
+  background-image: url("../images/creative_design_img_01.jpg");
 }
 
 .sec-brand-identity {
-  background-image: url("../images/img_02.jpg");
+  background-image: url("../images/brand_identity_img_01.jpg");
 }
 
 .sec-well-management {
-  background-image: url("../images/img_03.jpg");
+  background-image: url("../images/well_management_img_01.jpg");
 }
 
 .loader-wrapper {
@@ -216,6 +236,55 @@ header .menu a:hover::after, header .menu a.active::after {
 }
 .sec-welcome .logo {
   width: 14.5833333333vw;
+}
+
+.sec-works {
+  background-color: #f3f1f1;
+  padding-top: 5.4166666667vw;
+  padding-bottom: 5.2083333333vw;
+}
+.sec-works .heading {
+  font-size: 2.0833333333vw;
+  font-weight: 600;
+  color: #222222;
+  text-align: center;
+  margin-bottom: 1.7708333333vw;
+}
+.sec-works .desc {
+  font-size: 1.0416666667vw;
+  color: #666666;
+  text-align: center;
+  margin-bottom: 1.7708333333vw;
+}
+.sec-works .list {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 2.34375vw 1fr 2.34375vw 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.34375vw;
+}
+.sec-works .list .item-01 {
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+.sec-works .list .item-03 {
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+.sec-works .list .info {
+  background-color: #fff;
+  padding: 1.40625vw 1.3020833333vw 1.3541666667vw 1.3020833333vw;
+}
+.sec-works .list .title {
+  font-size: 1.3020833333vw;
+  font-weight: 600;
+  color: #222222;
+  line-height: 1.1;
+  margin-bottom: 1.1979166667vw;
+}
+.sec-works .list .text {
+  font-size: 0.8333333333vw;
+  color: #222222;
 }
 
 footer {
