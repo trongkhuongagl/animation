@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", () => {
       end: () => "+=" + scrollDistance, // scroll length = horizontal content length
       anticipatePin: 1, // Helps animation smoother at the start of the battery, avoiding frame stuttering
       invalidateOnRefresh: true, // Tell ScrollTrigger to refresh dynamic values ​​when called
-      markers: true,
+      // markers: true,
     }
   });
 });
