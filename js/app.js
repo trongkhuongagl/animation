@@ -2,9 +2,7 @@
 window.addEventListener("DOMContentLoaded", (event) => {
   const loader = document.querySelector(".loader-wrapper");
   setTimeout(() =>  {
-    loader.style.opacity = "0";
-    loader.style.transition = "opacity 0.3s ease";
-    loader.style.display = "none"
+    loader.classList.add("is-done");
   }, 1000);
 });
 
