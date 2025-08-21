@@ -326,8 +326,8 @@ header .menu a:hover::after, header .menu a.active::after {
   width: fit-content;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 33.3333333333vw 2.34375vw 33.3333333333vw 2.34375vw 33.3333333333vw 2.34375vw 33.3333333333vw;
-  grid-template-columns: repeat(4, 33.3333333333vw);
+  -ms-grid-columns: clamp(0px, 33.3333333333vw, 640px) 2.34375vw clamp(0px, 33.3333333333vw, 640px) 2.34375vw clamp(0px, 33.3333333333vw, 640px) 2.34375vw clamp(0px, 33.3333333333vw, 640px);
+  grid-template-columns: repeat(4, clamp(0px, 33.3333333333vw, 640px));
   gap: 2.34375vw;
   padding-left: 18.8020833333vw;
   padding-right: 2.34375vw;

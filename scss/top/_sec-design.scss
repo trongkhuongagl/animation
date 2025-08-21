@@ -29,7 +29,7 @@
   .list {
     width: fit-content;
     display: grid;
-    grid-template-columns: repeat(4, vw_pc(640));
+    grid-template-columns: repeat(4, clamp(0px, vw_pc(640), 640px));
     gap: vw_pc(45);
     padding-left: vw_pc(361);
     padding-right: vw_pc(45);
