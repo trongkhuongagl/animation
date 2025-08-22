@@ -1,0 +1,51 @@
+.sec-gallery {
+  background-color: #f3f1f1;
+  height: 100vh;
+  overflow: hidden;
+  padding-top: vw_pc(100);
+  padding-bottom: vw_pc(100);
+  &-container {
+    width: vw_pc(1720);
+    margin: 0 auto;
+  }
+  &-inner {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  .info {
+    width: vw_pc(548);
+  }
+  .heading {
+    font-size: vw_pc(40);
+    font-weight: 700;
+    line-height: 1.1;
+    color: #222222;
+    margin-bottom: vw_pc(24);
+  }
+  .desc {
+    font-size: vw_pc(20);
+    color: #777777;
+    margin-bottom: vw_pc(182);
+  }
+  .list {
+    .item {
+      font-size: vw_pc(36);
+      font-weight: 300;
+      color: #777777;
+      line-height: calc(80/36);
+      transition: all 0.3s;
+      &.is-active {
+        color: #222222;
+      }
+    }
+  }
+  .images {
+    width: vw_pc(1089);
+  }
+  .image {
+    &:not(:first-of-type) {
+      margin-top: vw_pc(100);
+    }
+  }
+}

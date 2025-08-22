@@ -37,8 +37,7 @@ img {
   object-fit: cover;
 }
 .l-container {
-  max-width: 1200px;
-  width: 100%;
+  width: vw_pc(1200);
   margin: 0 auto;
 }
 
