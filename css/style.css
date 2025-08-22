@@ -359,6 +359,77 @@ header .menu a:hover::after, header .menu a.active::after {
   color: #222222;
 }
 
+.sec-services {
+  background-color: #f3f1f1;
+  height: 100vh;
+  padding-top: 5.3645833333vw;
+  padding-bottom: 6.6145833333vw;
+  overflow: hidden;
+}
+.sec-services-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+.sec-services .info {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding-bottom: 9.375vw;
+}
+.sec-services .heading {
+  font-size: 2.0833333333vw;
+  font-weight: 600;
+  color: #222222;
+  line-height: 1.1;
+  padding-right: 1.0416666667vw;
+  margin-bottom: 1.5625vw;
+}
+.sec-services .desc {
+  font-size: 1.0416666667vw;
+  color: #777777;
+  padding-right: 1.0416666667vw;
+  margin-bottom: 2.0833333333vw;
+}
+.sec-services .list .item {
+  padding: 1.5625vw;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.sec-services .list .item:hover, .sec-services .list .item.is-active {
+  background-color: #88cae4;
+}
+.sec-services .list .item:hover .title,
+.sec-services .list .item:hover .text, .sec-services .list .item.is-active .title,
+.sec-services .list .item.is-active .text {
+  color: #fff;
+}
+.sec-services .list .title {
+  font-size: 1.3020833333vw;
+  font-weight: 600;
+  color: #222222;
+  line-height: 1.1;
+  margin-bottom: 1.0416666667vw;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.sec-services .list .text {
+  font-size: 0.8333333333vw;
+  color: #222222;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.sec-services .image {
+  width: 31.25vw;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
 footer {
   background: #111;
   padding: 50px;

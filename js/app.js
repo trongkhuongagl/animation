@@ -45,7 +45,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 document.addEventListener("DOMContentLoaded", () => {
   const header = document.querySelector("header");
-  const sections = document.querySelectorAll(".js-sec-works"); // (.js-sec-works, .js-sec-test)
+  const sections = document.querySelectorAll(
+    ".js-sec-works, .js-sec-services"
+  );
 
   const observer = new IntersectionObserver(
     (entries) => {
@@ -118,5 +120,57 @@ document.addEventListener("DOMContentLoaded", () => {
       invalidateOnRefresh: true, // Tell ScrollTrigger to refresh dynamic values ​​when called
       // markers: true,
     }
+  });
+});
+
+// Services
+document.addEventListener("DOMContentLoaded", () => {
+  const secServices = document.querySelector(".js-sec-services");
+  const secServicesInfo = document.querySelector(".js-sec-services-info");
+  if (!secServices || !secServicesInfo) return;
+
+  let serviceTL = null; // save this section's own timeline
+
+  function initServicesScroll() {
+    // Kill old timeline if any
+    if (serviceTL) {
+      serviceTL.scrollTrigger.kill();
+      serviceTL.kill();
+      serviceTL = null;
+    }
+
+    const infoHeight = secServicesInfo.offsetHeight;
+    const viewportHeight = window.innerHeight;
+
+    if (infoHeight <= viewportHeight) {
+      // No need pin, reset
+      gsap.set(secServicesInfo, { y: 0 });
+      return;
+    }
+
+    // Create timeline + scrollTrigger
+    serviceTL = gsap.timeline({
+      scrollTrigger: {
+        trigger: secServices,
+        start: "top top",
+        end: "+=" + (infoHeight - viewportHeight),
+        pin: true,
+        scrub: true,
+        anticipatePin: 1,
+        // markers: true,
+      },
+    });
+
+    serviceTL.to(secServicesInfo, {
+      y: -(infoHeight - viewportHeight),
+      ease: "none",
+    });
+  }
+
+  initServicesScroll();
+
+  window.addEventListener("resize", () => {
+    initServicesScroll();
+    ScrollTrigger.refresh();
   });
 });
