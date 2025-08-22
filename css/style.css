@@ -430,6 +430,105 @@ header .menu a:hover::after, header .menu a.active::after {
       align-self: flex-start;
 }
 
+.sec-product {
+  padding-top: 5.3645833333vw;
+  padding-bottom: 5.2083333333vw;
+  background-image: url(../images/product_bg.jpg);
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+}
+.sec-product-head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 1.0416666667vw;
+  margin-bottom: 2.0833333333vw;
+}
+.sec-product-head .heading {
+  font-size: 2.0833333333vw;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.1;
+}
+.sec-product-head .desc {
+  font-size: 1.0416666667vw;
+  color: #ffffff;
+}
+.sec-product-slider {
+  overflow: unset;
+}
+.sec-product-slider .list {
+  padding-bottom: 3.6458333333vw;
+}
+.sec-product-slider .list .item {
+  width: 20.8333333333vw;
+}
+.sec-product-slider .list .name {
+  font-size: 1.5625vw;
+  font-weight: 700;
+  line-height: 1.1;
+  background-color: #fff;
+  color: #222222;
+  padding: 1.1979166667vw 1.5625vw;
+}
+.sec-product-slider .swiper-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.0416666667vw;
+}
+.sec-product-slider .swiper-button {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1.0416666667vw;
+}
+.sec-product-slider .swiper-button-next,
+.sec-product-slider .swiper-button-prev {
+  position: static;
+  margin: 0;
+  padding: 0;
+  -webkit-transform: none;
+          transform: none;
+  width: 3.125vw;
+  height: 3.125vw;
+  border-radius: 50%;
+  background-color: #fff;
+}
+.sec-product-slider .swiper-button-next::after,
+.sec-product-slider .swiper-button-prev::after {
+  color: #222222;
+  font-size: 1.1458333333vw;
+  font-weight: 700;
+}
+.sec-product-slider .swiper-scrollbar {
+  border-radius: 0;
+  background-color: rgba(255, 255, 255, 0.35);
+}
+.sec-product-slider .swiper-scrollbar.swiper-scrollbar-horizontal {
+  position: static;
+}
+.sec-product-slider .swiper-scrollbar-drag {
+  background-color: #fff;
+  border-radius: 0;
+}
+
 footer {
   background: #111;
   padding: 50px;

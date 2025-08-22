@@ -1,0 +1,81 @@
+.sec-product {
+  padding-top: vw_pc(103);
+  padding-bottom: vw_pc(100);
+  background-image: url(../images/product_bg.jpg);
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+  &-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: vw_pc(20);
+    margin-bottom: vw_pc(40);
+    .heading {
+      font-size: vw_pc(40);
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 1.1;
+    }
+    .desc {
+      font-size: vw_pc(20);
+      color: #ffffff;
+    }
+  }
+  &-slider {
+    overflow: unset;
+    .list {
+      padding-bottom: vw_pc(70);
+      .item {
+        width: vw_pc(400);
+      }
+      .name {
+        font-size: vw_pc(30);
+        font-weight: 700;
+        line-height: 1.1;
+        background-color: #fff;
+        color: #222222;
+        padding: vw_pc(23) vw_pc(30);
+      }
+    }
+    .swiper-nav {
+      display: flex;
+      align-items: center;
+      gap: vw_pc(20);
+    }
+    .swiper-button {
+      width: fit-content;
+      display: flex;
+      align-items: center;
+      gap: vw_pc(20);
+    }
+    .swiper-button-next,
+    .swiper-button-prev {
+      position: static;
+      margin: 0;
+      padding: 0;
+      transform: none;
+      width: vw_pc(60);
+      height: vw_pc(60);
+      border-radius: 50%;
+      background-color: #fff;
+      &::after {
+        color: #222222;
+        font-size: vw_pc(22);
+        font-weight: 700;
+      }
+
+    }
+    .swiper-scrollbar {
+      border-radius: 0;
+      background-color: rgba(255, 255, 255, 0.35);
+      &.swiper-scrollbar-horizontal {
+        position: static;
+      }
+    }
+    .swiper-scrollbar-drag {
+      background-color: #fff;
+      border-radius: 0;
+    }
+  }
+}

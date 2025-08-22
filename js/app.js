@@ -174,3 +174,31 @@ document.addEventListener("DOMContentLoaded", () => {
     ScrollTrigger.refresh();
   });
 });
+
+// Product
+document.addEventListener("DOMContentLoaded", () => {
+  const swiper = new Swiper(".js-sec-product-slider", {
+    slidesPerView: "auto",
+    spaceBetween: 40,
+    loop: false,
+    speed: 600, // increase smoothness when moving
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    scrollbar: {
+      el: ".swiper-scrollbar",
+      draggable: true,
+    },
+    
+    // increase smoothness
+    freeMode: {
+      enabled: true,
+      momentum: true,
+      momentumRatio: 1,
+      momentumBounce: true,
+      momentumVelocityRatio: 1,
+    },
+    touchRatio: 1,
+  });
+});
