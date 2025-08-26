@@ -160,7 +160,7 @@ header .menu a::after {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
-header .menu a:hover::after, header .menu a.active::after {
+header .menu a:hover::after, header .menu a.is-active::after {
   width: 100%;
 }
 
@@ -274,12 +274,19 @@ header .menu a:hover::after, header .menu a.active::after {
   gap: 2.34375vw;
 }
 .sec-works .list .item-01 {
-  -webkit-transform: translateX(100%);
-          transform: translateX(100%);
+  -webkit-transform: translateX(110%);
+          transform: translateX(110%);
+  z-index: 1;
+}
+.sec-works .list .item-02 {
+  -webkit-transform: translateX(15%);
+          transform: translateX(15%);
+  z-index: 2;
 }
 .sec-works .list .item-03 {
-  -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
+  -webkit-transform: translateX(-80%);
+          transform: translateX(-80%);
+  z-index: 3;
 }
 .sec-works .list .info {
   background-color: #fff;
@@ -399,14 +406,30 @@ header .menu a:hover::after, header .menu a.active::after {
   padding: 1.5625vw;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
-}
-.sec-services .list .item:hover, .sec-services .list .item.is-active {
-  background-color: #88cae4;
+  cursor: pointer;
 }
 .sec-services .list .item:hover .title,
 .sec-services .list .item:hover .text, .sec-services .list .item.is-active .title,
 .sec-services .list .item.is-active .text {
   color: #fff;
+}
+.sec-services .list .item-01:hover, .sec-services .list .item-01.is-active {
+  background-color: #88cae4;
+}
+.sec-services .list .item-02:hover, .sec-services .list .item-02.is-active {
+  background-color: #00a79d;
+}
+.sec-services .list .item-03:hover, .sec-services .list .item-03.is-active {
+  background-color: #f80f2d;
+}
+.sec-services .list .item-04:hover, .sec-services .list .item-04.is-active {
+  background-color: #edc64d;
+}
+.sec-services .list .item-05:hover, .sec-services .list .item-05.is-active {
+  background-color: #6d79b8;
+}
+.sec-services .list .item-06:hover, .sec-services .list .item-06.is-active {
+  background-color: #ff5649;
 }
 .sec-services .list .title {
   font-size: 1.3020833333vw;
@@ -423,10 +446,24 @@ header .menu a:hover::after, header .menu a.active::after {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
-.sec-services .image {
+.sec-services .images {
   width: 31.25vw;
   -ms-flex-item-align: start;
       align-self: flex-start;
+  position: relative;
+}
+.sec-services .image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.sec-services .image.is-active {
+  opacity: 1;
+  visibility: visible;
 }
 
 .sec-product {
@@ -581,6 +618,9 @@ header .menu a:hover::after, header .menu a.active::after {
 }
 .sec-gallery .image:not(:first-of-type) {
   margin-top: 5.2083333333vw;
+}
+.sec-gallery .spacing {
+  height: 10.4166666667vw;
 }
 
 footer {

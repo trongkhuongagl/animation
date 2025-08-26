@@ -31,12 +31,48 @@
     .item {
       padding: vw_pc(30);
       transition: all 0.3s;
+      cursor: pointer;
       &:hover,
       &.is-active {
-        background-color: #88cae4;
         .title,
         .text {
           color: #fff;
+        }
+      }
+      &-01 {
+        &:hover,
+        &.is-active {
+          background-color: #88cae4;
+        }
+      }
+      &-02 {
+        &:hover,
+        &.is-active {
+          background-color: #00a79d;
+        }
+      }
+      &-03 {
+        &:hover,
+        &.is-active {
+          background-color: #f80f2d;
+        }
+      }
+      &-04 {
+        &:hover,
+        &.is-active {
+          background-color: #edc64d;
+        }
+      }
+      &-05 {
+        &:hover,
+        &.is-active {
+          background-color: #6d79b8;
+        }
+      }
+      &-06 {
+        &:hover,
+        &.is-active {
+          background-color: #ff5649;
         }
       }
     }
@@ -54,8 +90,21 @@
       transition: all 0.3s;
     }
   }
-  .image {
+  .images {
     width: vw_pc(600);
     align-self: flex-start;
+    position: relative;
+  }
+  .image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+    &.is-active {
+      opacity: 1;
+      visibility: visible;
+    }
   }
 }

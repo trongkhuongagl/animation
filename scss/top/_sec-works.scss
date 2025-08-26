@@ -20,10 +20,16 @@
     grid-template-columns: repeat(3, 1fr);
     gap: vw_pc(45);
     .item-01 {
-      transform: translateX(100%);
+      transform: translateX(110%);
+      z-index: 1;
+    }
+    .item-02 {
+      transform: translateX(15%);
+      z-index: 2;
     }
     .item-03 {
-      transform: translateX(-100%);
+      transform: translateX(-80%);
+      z-index: 3;
     }
     .info {
       background-color: #fff;
